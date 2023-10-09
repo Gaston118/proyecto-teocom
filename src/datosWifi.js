@@ -57,22 +57,13 @@ function DatosWifi(){
     console.log('Iniciando suscripciones a eventos en Supabase...');
 
     // Suscribirte a eventos de inserción
-    const insertSubscription = supabase
-      .channel('any')
-      .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'Datos' }, handleInsertChange)
-      .subscribe();
+    
 
-    // Suscribirte a eventos de actualización
-    const updateSubscription = supabase
-      .channel('any')
-      .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'Datos' }, handleUpdateChange)
-      .subscribe();
-
-    // Limpia las suscripciones cuando el componente se desmonta
-    return () => {
-      insertSubscription.unsubscribe();
-      updateSubscription.unsubscribe();
-    };
+supabase
+  .channel('any')
+  .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'Datos' }, handleInsertChange)
+  .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'Datos' }, handleUpdateChange)
+  .subscribe()
 
   }, []);
 
