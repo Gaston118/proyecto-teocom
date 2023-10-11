@@ -27,7 +27,8 @@ ChartJS.register(
 
 
 export default function LinesChart({ datos }) {
-  const [chartData, setChartData] = useState(null);
+  const [chartDataT, setChartDataT] = useState(null);
+  const [chartDataH, setChartDataH] = useState(null);
 
   useEffect(() => {
     if (datos) {
@@ -36,7 +37,7 @@ export default function LinesChart({ datos }) {
       const temperaturaData = datos.map((dato) => dato.temperatura);
 
       // Crear el objeto de datos del gráfico
-      const chartData = {
+      const chartDataT = {
         labels: labels,
         datasets: [
           {
@@ -53,7 +54,27 @@ export default function LinesChart({ datos }) {
         ],
       };
 
-      setChartData(chartData);
+      const humedadData = datos.map((dato) => dato.humedad);
+      const chartDataH = {
+        labels: labels,
+        datasets: [
+          {
+            label: "Humedad",
+            data: humedadData,
+            tension: 0.5,
+            fill: true,
+            borderColor: "rgb(0, 1, 2)",
+            backgroundColor: "rgba(99, 88, 77, 66)",
+            pointRadius: 5,
+            pointBorderColor: "rgba(0, 88, 77, 66)",
+            pointBackgroundColor: "rgba(0, 88, 77, 66)",
+          },
+        ],
+      };
+
+
+      setChartDataT(chartDataT);
+      setChartDataH(chartDataH);
     }
   }, [datos]);
 
@@ -72,7 +93,8 @@ export default function LinesChart({ datos }) {
 
   return (
     <div className="line-chart">
-      {chartData && <Line data={chartData} options={options} />}
+      {chartDataT && <Line data={chartDataT} options={options} />}
+      {chartDataH && <Line data={chartDataH} options={options} />}
     </div>
   );
 }

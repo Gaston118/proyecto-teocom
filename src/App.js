@@ -1,5 +1,5 @@
 import React from "react";
-import DatosWifi from "./datosWifi";
+import DatosWifi from "./data/datosWifi";
 
 function App(){
   return(
