@@ -45,6 +45,7 @@ function DatosWifi(){
   };
   // Actualiza el estado local de Datos con la nueva inserción
   setDatos((prevDatos) => [...prevDatos, newDato]);
+  setUsuarios((prevDatos)=>[...prevDatos, newDato].slice(-10));
   };
 
   // Función para manejar eventos de actualización
