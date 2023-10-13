@@ -95,8 +95,6 @@ function DatosWifi(){
     fd();
     console.log('Iniciando suscripciones a eventos en Supabase...');
 
-    // Suscribirte a eventos de inserción 
-
 supabase
   .channel('any')
   .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'Datos' }, handleInsertChange)

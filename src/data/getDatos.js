@@ -1,9 +1,10 @@
 import supabase from "./supabaseCliente";
 import { DateTime } from "luxon";
 
-export async function fetchDatos(){
+export async function fetchDatos(tabla){
+  
     const { data, error } = await supabase
-    .from("Datos")
+    .from(tabla)
     .select("*")
 
       if (error) {
