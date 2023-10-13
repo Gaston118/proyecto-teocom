@@ -6,6 +6,7 @@ import LinesChart from "../components/LinesChart";
 import CustomTable from "../components/CustomTable";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { fetchDatos } from "./getDatos";
 
 function DatosWifi(){
     const [fetchError, setFetchError] = useState(null);
@@ -74,43 +75,24 @@ function DatosWifi(){
   };
 
   useEffect(() => {
-    const fetchDatos = async () => {
-    const { data, error } = await supabase
-    .from("Datos")
-    .select("*")
+    async function fd(){
+      const data = await fetchDatos();
 
-      if (error) {
+      if (data.error) {
         setFetchError("ERROR EN OBTENCION DE DATOS");
         setDatos(null);
         setUsuarios(null);
-        console.log(error);
       }
-      if (data) {
-       // Formatear la hora y convertirla al horario de Argentina (GMT-3)
-    const datosConHoraFechaArg = data.map((dato) => ({
-      ...dato,
-      time: DateTime.fromISO(dato.time, { zone: "utc" })
-        .setZone("America/Argentina/Buenos_Aires")
-        .toLocaleString(DateTime.TIME_SIMPLE),
-      date: DateTime.fromISO(dato.time, { zone: "utc" })
-        .setZone("America/Argentina/Buenos_Aires")
-        .toLocaleString(DateTime.DATE_FULL),
-    }));
-    if (datosConHoraFechaArg.length === 0) {
-      setFetchError("La base de datos está vacía");
-      setDatos(null);
-      setUsuarios(null);
-    } else {
-      console.log(datosConHoraFechaArg)
-      setDatos(datosConHoraFechaArg);
-      setUsuarios(datosConHoraFechaArg.slice(-10));
-      setFetchError(null);
+      else{
+        console.log(data)
+        setDatos(data);
+        setUsuarios(data.slice(-10));
+        setFetchError(null);
+      }
+
     }
-      }
-    };
 
-    fetchDatos();
-
+    fd();
     console.log('Iniciando suscripciones a eventos en Supabase...');
 
     // Suscribirte a eventos de inserción 
@@ -133,7 +115,7 @@ supabase
         <input
           className="form-control inputBuscar"
           value={busqueda}
-          placeholder="Búsqueda por ID"
+          placeholder="Búsqueda por ID_modulo"
           onChange={handleChange}
         />
         <button className="btn btn-success">
@@ -148,7 +130,8 @@ supabase
             <p>No data to display</p> 
           )} 
      </div>
-          {Datos && <LinesChart datos={Datos} />}
+     {Datos && <LinesChart datos={Datos} />}
+    
         </div>
       )}
     </div>
