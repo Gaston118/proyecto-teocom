@@ -31,7 +31,7 @@ export default function LinesChart({ datos }) {
   const [chartDataH, setChartDataH] = useState(null);
 
   useEffect(() => {
-    if (datos) {
+    if (datos && Array.isArray(datos)) {
       // Extraer etiquetas de tiempo y datos de temperatura
       const labels = datos.map((dato) => dato.time);
       const temperaturaData = datos.map((dato) => dato.temperatura);
@@ -63,11 +63,11 @@ export default function LinesChart({ datos }) {
             data: humedadData,
             tension: 0.5,
             fill: true,
-            borderColor: "rgb(0, 1, 2)",
-            backgroundColor: "rgba(99, 88, 77, 66)",
+            borderColor: "rgb(128, 191, 255)",
+            backgroundColor: "rgba(128, 191, 255, 0.5)",
             pointRadius: 5,
-            pointBorderColor: "rgba(0, 88, 77, 66)",
-            pointBackgroundColor: "rgba(0, 88, 77, 66)",
+            pointBorderColor: "rgba(128, 191, 255)",
+            pointBackgroundColor: "rgba(128, 191, 255)",
           },
         ],
       };

@@ -13,16 +13,19 @@ function DatosWifi(){
     const [Datos, setDatos] = useState(null);
     const [usuarios, setUsuarios]= useState([]);
     const [busqueda, setBusqueda]= useState("");
+    const [isSearching, setIsSearching] = useState(false);
 
     const filtrar = (terminoBusqueda) => {
       if (terminoBusqueda.trim() === "") {
         // Si el campo de búsqueda está vacío, muestra la tabla original sin filtro
         setUsuarios(Datos.slice(-10));
+        setIsSearching(false);
       } else {
         const resultadosBusqueda = Datos.filter((elemento) => {
           return elemento.id_modulo.toString() === terminoBusqueda;
         });
         setUsuarios(resultadosBusqueda);
+        setIsSearching(true);
       }
     };    
 
@@ -76,7 +79,7 @@ function DatosWifi(){
 
   useEffect(() => {
     async function fd(){
-      const data = await fetchDatos();
+      const data = await fetchDatos("Datos");
 
       if (data.error) {
         setFetchError("ERROR EN OBTENCION DE DATOS");
@@ -128,8 +131,7 @@ supabase
             <p>No data to display</p> 
           )} 
      </div>
-     {Datos && <LinesChart datos={Datos} />}
-    
+     {Datos && <LinesChart datos={isSearching ? usuarios : Datos.slice(-48)} />}
         </div>
       )}
     </div>
