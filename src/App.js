@@ -13,9 +13,9 @@ function App(){
       <BrowserRouter>
         <nav>
           <h1>Teoria de las comunicaciones</h1>
-          <Link to="/" className="nav"><span class="material-symbols-outlined">home</span></Link>
-          <Link to="/data/datosWifi" className="nav"><span class="material-symbols-outlined">wifi</span></Link>
-          <Link to="/data/datosLora" className="nav"><span class="material-symbols-outlined">wifi_tethering</span></Link> 
+          <Link to="/" className="nav"><span className="material-symbols-outlined">home</span></Link>
+          <Link to="/data/datosWifi" className="nav"><span className="material-symbols-outlined">wifi</span></Link>
+          <Link to="/data/datosLora" className="nav"><span className="material-symbols-outlined">wifi_tethering</span></Link> 
         </nav>
         <Routes>
           <Route path="/" element={<Home/>}/>
