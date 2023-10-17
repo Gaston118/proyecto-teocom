@@ -76,7 +76,7 @@ supabase
   }, []);
   return (
     <div>
-        {fetchError ? (<p>{fetchError}</p>): (datas && <LinesChart datos={datas.slice(-50)} />)}
+        {fetchError ? (<p>{fetchError}</p>): (datas && <LinesChart datos={datas.slice(-40)} />)}
     </div>
   )
 }

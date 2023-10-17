@@ -1,6 +1,7 @@
 // Componente LineChart.js
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
+import "./LinesChart.css"
 
 import {
     Chart as ChartJS,
@@ -85,16 +86,26 @@ export default function LinesChart({ datos }) {
       },
       x: {
         ticks: {
-          color: "rgb(255, 99, 132)",
+          color: "rgb(71, 75, 75)",
         },
       },
     },
   };
 
   return (
-    <div className="line-chart">
-      {chartDataT && <Line data={chartDataT} options={options} />}
-      {chartDataH && <Line data={chartDataH} options={options} />}
+    <div className="contenedor">
+      {chartDataT && (
+        <div className="chartT">
+          <h3 className="h3-chart">Gráfico de Temperatura</h3>
+          <Line data={chartDataT} options={options} />
+        </div>
+      )}
+      {chartDataH && (
+        <div className="chartH">
+          <h3 className="h3-chart">Gráfico de Humedad</h3>
+          <Line data={chartDataH} options={options} />
+        </div>
+      )}
     </div>
   );
 }

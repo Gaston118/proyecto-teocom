@@ -1,0 +1,22 @@
+.contenedor{
+    margin: 20px;
+}
+
+.h3-chart{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+    user-select: none;
+    text-align: center;
+}
+
+.chartT{
+    margin:10px;
+    margin-bottom: 40px;
+    user-select: none;
+}
+
+.chartH{
+    margin:10px;
+    margin-bottom: 40px;
+    user-select: none;
+}
