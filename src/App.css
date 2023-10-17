@@ -1,17 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
 :root {
-  --primary: #22243b;
+  --primary: linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(0, 26, 157, 1) 0%, rgba(0, 128, 0, 1) 100%, rgba(0, 128, 0, 1) 100%);
 }
 h1,h2,h3 {
   margin: 0;
 }
-
 body {
   margin: 0;
-  color: #333;
-  font-family: 'Poppins';
-  background: #f2f2f2;
 }
 nav {
   background: var(--primary);
@@ -19,15 +14,14 @@ nav {
   text-align: center;
 }
 nav a {
-  color: #f2f2f2;
+  color: #ffffff;
   margin: 10px;
   display: inline-block;
+  text-decoration: none;
 }
 nav h1 {
-  color: #ffeba7;
+  color: #ffffff;
+  font-family: 'Cairo Play';
+  font-size: 44px;
 }
-.page {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
-}
+

@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    padding: 20px; /* Agrega espacio a los lados para separar "Wifi" y "inputBuscar" */
+    background-color: black;
+  }
+  
+  h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 50px;
+    flex: 1; /* Hace que "Wifi" ocupe el espacio necesario y "inputBuscar" quede a la derecha */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: white;
+    padding-left: 265px;
+  }
+
+  .containerInput {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .inputBuscar {
+    margin-right: 40px;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+
+  

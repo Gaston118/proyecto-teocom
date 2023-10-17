@@ -12,10 +12,10 @@ function App(){
     <div className="App">
       <BrowserRouter>
         <nav>
-          <h1>Teoria de las comunicaciones 2023</h1>
-          <Link to="/" className="nav">INICIO</Link>
-          <Link to="/data/datosWifi" className="nav">DATOS WIFI</Link>
-          <Link to="/data/datosLora" className="nav">DATOS LORA</Link> 
+          <h1>Teoria de las comunicaciones</h1>
+          <Link to="/" className="nav"><span class="material-symbols-outlined">home</span></Link>
+          <Link to="/data/datosWifi" className="nav"><span class="material-symbols-outlined">wifi</span></Link>
+          <Link to="/data/datosLora" className="nav"><span class="material-symbols-outlined">wifi_tethering</span></Link> 
         </nav>
         <Routes>
           <Route path="/" element={<Home/>}/>

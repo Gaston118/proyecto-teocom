@@ -4,9 +4,8 @@ import { DateTime } from "luxon";
 import { useEffect, useState } from "react";
 import LinesChart from "../components/LinesChart";
 import CustomTable from "../components/CustomTable";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { fetchDatos } from "./getDatos";
+import "./datosWifi.css";
 
 function DatosWifi(){
     const [fetchError, setFetchError] = useState(null);
@@ -112,18 +111,17 @@ supabase
         <p>{fetchError}</p>
       ) : (
         <div>
-          <div className="containerInput">
-        <input
-          className="form-control inputBuscar"
-          value={busqueda}
-          placeholder="Búsqueda por ID_modulo"
-          onChange={handleChange}
-        />
-        <button className="btn btn-success">
-          <FontAwesomeIcon icon={faSearch}/>
-        </button>
-      </div>
-          <h3>Datos WIFI:</h3>
+          <div className="container">
+            <h2 class="wifi-title">Wifi</h2>
+            <div className="containerInput">
+            <input
+            className="form-control inputBuscar"
+            value={busqueda}
+            placeholder="Búsqueda por ID modulo"
+            onChange={handleChange}
+            />
+            </div>
+            </div>
           <div>
           {usuarios && usuarios.length > 0 ? ( 
             <CustomTable data={usuarios} /> 
