@@ -1,8 +1,9 @@
 .container {
     display: flex;
     align-items: center;
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    padding: 20px; /* Agrega espacio a los lados para separar "Wifi" y "inputBuscar" */
+    width: 100%;
+     /* Asegura que el contenedor ocupe todo el ancho disponible */
+     /* Agrega espacio a los lados para separar "Wifi" y "inputBuscar" */
     background-color: black;
   }
   
@@ -17,12 +18,6 @@
     transition: 0.3s;
   }
 
-  
-
-  .containerInput {
-    display: flex;
-    align-items: flex-end;
-  }
   
   .inputBuscar {
     border: 2px solid transparent;
@@ -43,5 +38,6 @@
   box-shadow: 0px 0px 0px 5px rgba(8, 232, 94, 0.2);
   background-color: white;
 }
+
 
   

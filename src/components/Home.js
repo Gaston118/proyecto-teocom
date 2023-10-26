@@ -1,5 +1,4 @@
 import React from 'react'
-import LinesChart from "./LinesChart";
 import { fetchDatos } from "../data/getDatos";
 import { useEffect, useState } from "react";
 import supabase from "../data/supabaseCliente";
@@ -75,9 +74,7 @@ supabase
   .subscribe()
   }, []);
   return (
-    <div>
-        {fetchError ? (<p>{fetchError}</p>): (datas && <LinesChart datos={datas.slice(-40)} />)}
-    </div>
+    <></>
   )
 }
 
