@@ -39,10 +39,10 @@ function DatosLora() {
     // Formatear la hora y convertirla al horario de Argentina (GMT-3)
   const newDato = {
     ...payload.new,
-    time: DateTime.fromISO(payload.new.time, { zone: "utc" })
+    time: DateTime.fromISO(payload.new.time)
       .setZone("America/Argentina/Buenos_Aires")
       .toLocaleString(DateTime.TIME_SIMPLE),
-    date: DateTime.fromISO(payload.new.time, { zone: "utc" })
+    date: DateTime.fromISO(payload.new.time)
       .setZone("America/Argentina/Buenos_Aires")
       .toLocaleString(DateTime.DATE_FULL),
   };
@@ -106,13 +106,13 @@ supabase
   }, []);
 
   return (
-    <div className="datosLora">
+    <div className="datosWifi">
       {fetchError ? (
         <p>{fetchError}</p>
       ) : (
         <div>
-          <div className="cont">
-            <h2 className="Lora-title">LoRa</h2>
+          <div className="container">
+            <h2 className="wifi-title">LoRa</h2>
             <div className="containerInput">
             <input
             className="form-control inputBuscar"

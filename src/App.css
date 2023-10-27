@@ -20,12 +20,14 @@ nav {
   display: inline-block;
   text-decoration: none;
   user-select: none;
+  margin-right: 40px;
 }
 nav h1 {
   color: #ffffff;
   font-family: 'Cairo Play';
   font-size: 44px;
   user-select: none;
+  margin-right: 120px;
 }
 
 .nav :hover{
@@ -33,3 +35,14 @@ nav h1 {
   color: red;
   transition: all 0.3s;
 }
+
+img{
+  width: 100px;
+  float: left;
+  margin: 20px;
+}
+
+.iconos{
+  margin-right: 180px;
+}
+
