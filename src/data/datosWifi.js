@@ -6,7 +6,7 @@ import LinesChart from "../components/LinesChart";
 import CustomTable from "../components/CustomTable";
 import { fetchDatos } from "./getDatos";
 import "./datosWifi.css";
-
+import Swal from 'sweetalert2';
 
 
 function DatosWifi(){
@@ -51,6 +51,20 @@ function DatosWifi(){
   // Actualiza el estado local de Datos con la nueva inserción
   setDatos((prevDatos) => [...prevDatos, newDato]);
   setUsuarios((prevDatos)=>[...prevDatos, newDato].slice(-10));
+  if (newDato.temperatura > 50) {
+    Swal.fire({
+      title: 'Alerta de Temperatura Alta',
+      text: `La temperatura es ${newDato.temperatura}°C en el módulo ${newDato.id_modulo}`,
+      icon: 'warning',
+    });
+  }
+  if (newDato.humedad < 20) {
+    Swal.fire({
+      title: 'Alerta de Humedad Baja',
+      text: `La humedad es ${newDato.humedad}% en el módulo ${newDato.id_modulo}`,
+      icon: 'warning',
+    });
+  }
 
   };
 

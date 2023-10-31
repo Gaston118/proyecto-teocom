@@ -28,7 +28,7 @@
     font-size: 32px;
     font-weight: 700;
     opacity: 1;
-    background: linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(0, 26, 157, 1) 0%, rgba(0, 128, 0, 1) 100%, rgba(0, 128, 0, 1) 100%);
+    background: linear-gradient(#0f57a9, #0d2344);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -46,7 +46,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(0, 26, 157, 1) 0%, rgba(0, 128, 0, 1) 100%, rgba(0, 128, 0, 1) 100%);
+    background: linear-gradient(#0f57a9, #0d2344);
     color: #e8e8e8;
     padding: 10px;
     line-height: 1.5;
@@ -67,7 +67,7 @@
     font-weight: 700;
     margin: 40px;
     opacity: 1;
-    background: linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(0, 26, 157, 1) 0%, rgba(0, 128, 0, 1) 100%, rgba(0, 128, 0, 1) 100%);
+    background: linear-gradient(#0f57a9, #0d2344);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -122,7 +122,7 @@
     font-size: 32px;
     font-weight: 700;
     opacity: 1;
-    background: linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(0, 26, 157, 1) 0%, rgba(0, 128, 0, 1) 100%, rgba(0, 128, 0, 1) 100%);
+    background: linear-gradient(#0f57a9, #0d2344);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -140,7 +140,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(0, 26, 157, 1) 0%, rgba(0, 128, 0, 1) 100%, rgba(0, 128, 0, 1) 100%);
+    background: linear-gradient(#0f57a9, #0d2344);
     color: #e8e8e8;
     padding: 10px;
     line-height: 1.5;
@@ -161,7 +161,7 @@
     font-weight: 700;
     margin: 40px;
     opacity: 1;
-    background: linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(0, 26, 157, 1) 0%, rgba(0, 128, 0, 1) 100%, rgba(0, 128, 0, 1) 100%);
+    background: linear-gradient(#10417c, #0d2344);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -208,11 +208,7 @@
 .lora-tit {
   text-align: center;
   font-size: 30px;
-  opacity: 1;
-  background: linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(0, 26, 157, 1) 0%, rgba(0, 128, 0, 1) 100%, rgba(0, 128, 0, 1) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #133867;
 }
 
 .cards{

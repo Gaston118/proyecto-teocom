@@ -5,6 +5,7 @@ import supabase from "../data/supabaseCliente";
 import { DateTime } from "luxon";
 import "./Home.css";
 import LinesChart from "./LinesChart";
+import Swal from 'sweetalert2';
 
 function Home() {
     const [fetchError, setFetchError] = useState(null);
@@ -25,6 +26,20 @@ function Home() {
   };
   // Actualiza el estado local de Datos con la nueva inserción
   setdata((prevDatos) => [...prevDatos, newDato]);
+  if (newDato.temperatura > 50) {
+    Swal.fire({
+      title: 'Alerta de Temperatura Alta',
+      text: `La temperatura es ${newDato.temperatura}°C en el módulo ${newDato.id_modulo}`,
+      icon: 'warning',
+    });
+  }
+  if (newDato.humedad < 20) {
+    Swal.fire({
+      title: 'Alerta de Humedad Baja',
+      text: `La humedad es ${newDato.humedad}% en el módulo ${newDato.id_modulo}`,
+      icon: 'warning',
+    });
+  }
   };
 
   // Función para manejar eventos de actualización
@@ -66,6 +81,20 @@ function Home() {
   };
   // Actualiza el estado local de Datos con la nueva inserción
   setdato((prevDatos) => [...prevDatos, newDato]);
+  if (newDato.temperatura > 50) {
+    Swal.fire({
+      title: 'Alerta de Temperatura Alta',
+      text: `La temperatura es ${newDato.temperatura}°C en el módulo ${newDato.id_modulo}`,
+      icon: 'warning',
+    });
+  }
+  if (newDato.humedad < 20) {
+    Swal.fire({
+      title: 'Alerta de Humedad Baja',
+      text: `La humedad es ${newDato.humedad}% en el módulo ${newDato.id_modulo}`,
+      icon: 'warning',
+    });
+  }
   };
 
   const handleUpdateChangeL = (payload) => {

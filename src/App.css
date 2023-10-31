@@ -1,6 +1,6 @@
 
 :root {
-  --primary: linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(0, 26, 157, 1) 0%, rgba(0, 128, 0, 1) 100%, rgba(0, 128, 0, 1) 100%);
+  --primary: linear-gradient(#0d2344,#10417c);
 }
 h1,h2,h3 {
   margin: 0;
@@ -32,7 +32,7 @@ nav h1 {
 
 .nav :hover{
   transform: scale(2);
-  color: red;
+  color: #86bbf3;
   transition: all 0.3s;
 }
 
@@ -45,4 +45,5 @@ img{
 .iconos{
   margin-right: 180px;
 }
+
 

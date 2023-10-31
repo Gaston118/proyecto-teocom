@@ -4,7 +4,7 @@
     width: 100%;
      /* Asegura que el contenedor ocupe todo el ancho disponible */
      /* Agrega espacio a los lados para separar "Wifi" y "inputBuscar" */
-    background-color: black;
+    background-color: #bfd9f8;
   }
   
   h2 {
@@ -12,7 +12,7 @@
     font-size: 50px;
     flex: 1; /* Hace que "Wifi" ocupe el espacio necesario y "inputBuscar" quede a la derecha */
     text-align: center; /* Centra el texto horizontalmente */
-    color: white;
+    color: #133867;
     padding-left: 200px;
     user-select: none;
     transition: 0.3s;
@@ -35,7 +35,7 @@
   .inputBuscar:hover,
   .inputBuscar:focus {
   border: 2px solid #4A9DEC;
-  box-shadow: 0px 0px 0px 5px rgba(8, 232, 94, 0.2);
+  box-shadow: 0px 0px 0px 3px #0f4c95;
   background-color: white;
 }
 
