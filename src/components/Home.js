@@ -191,11 +191,11 @@ supabase
           <div className="card">
             <div className="front-content">
             <p className='heading1'>Temperatura LoRa</p>
-            <p className='tempLora'>{(calculateAverage('lora', 'temperatura'))}°C</p>
+            <p className='tempLora'>{(Math.round((calculateAverage('lora', 'temperatura'))*10)/10)}°C</p>
             </div>
             <div className="content">
             <p className="heading">Humedad LoRa</p>
-            <p className='humLora'>{calculateAverage('lora', 'humedad')}%</p>
+            <p className='humLora'>{(Math.round((calculateAverage('lora', 'humedad'))*10)/10)}%</p>
             </div>
           </div>
         </div>
@@ -203,11 +203,11 @@ supabase
           <div className="card2">
             <div className="front-content2">
             <p className='heading2'>Temperatura Wifi</p>
-            <p className='tempwifi'>{calculateAverage('wifi', 'temperatura')}°C</p>
+            <p className='tempwifi'>{(Math.round((calculateAverage('wifi', 'temperatura'))*10)/10)}°C</p>
             </div>
             <div className="content2">
             <p className="heading22">Humedad Wifi</p>
-            <p className='humwifi'>{calculateAverage('wifi', 'humedad')}%</p>
+            <p className='humwifi'>{(Math.round((calculateAverage('wifi', 'humedad'))*10)/10)}%</p>
             </div>
           </div>
         </div>
