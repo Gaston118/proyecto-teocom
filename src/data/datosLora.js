@@ -130,21 +130,21 @@ supabase
           <div className="container">
             <h2 className="wifi-title">LoRa</h2>
             <div className="containerInput">
-            <input
-            className="form-control inputBuscar"
-            value={busqueda}
-            placeholder="Búsqueda por ID modulo"
-            onChange={handleChange}
-            />
-            </div>
-            </div>
+              <input
+              className="form-control inputBuscar"
+              value={busqueda}
+              placeholder="Búsqueda por ID modulo"
+              onChange={handleChange}
+              />
+          </div>
+          </div>
           <div>
-          {usuarios && usuarios.length > 0 ? ( 
-            <CustomTable data={usuarios} /> 
-          ) : ( 
-            <p>No data to display</p> 
-          )} 
-     </div>
+            {usuarios && usuarios.length > 0 ? ( 
+              <CustomTable data={usuarios} /> 
+            ) : ( 
+              <p>No data to display</p> 
+            )} 
+          </div>
      {Datos && <LinesChart datos={isSearching ? usuarios : Datos.slice(-48)} />}
         </div>
       )}

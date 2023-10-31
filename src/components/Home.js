@@ -41,7 +41,6 @@ function Home() {
     });
   }
   };
-
   // Función para manejar eventos de actualización
   const handleUpdateChangeW = (payload) => {
     console.log("Update change received!", payload);
@@ -187,31 +186,31 @@ supabase
    <div className='Home'>
     {fetchError ? (<p>{fetchError}</p>) : (
       <>
-      <div className='cards'>
-      <div className="card-container">
-      <div className="card">
-      <div className="front-content">
-      <p className='heading1'>Temperatura LoRa</p>
-      <p className='tempLora'>{calculateAverage('lora', 'temperatura')}°C</p>
-      </div>
-      <div className="content">
-      <p className="heading">Humedad LoRa</p>
-      <p className='humLora'>{calculateAverage('lora', 'humedad')}%</p>
-      </div>
-      </div>
-      </div>
-      <div className="card-container2">
-      <div className="card2">
-      <div className="front-content2">
-      <p className='heading2'>Temperatura Wifi</p>
-      <p className='tempwifi'>{calculateAverage('wifi', 'temperatura')}°C</p>
-      </div>
-      <div className="content2">
-      <p className="heading22">Humedad Wifi</p>
-      <p className='humwifi'>{calculateAverage('wifi', 'humedad')}%</p>
-      </div>
-      </div>
-      </div>
+      <div className = "cards">
+        <div className="card-container">
+          <div className="card">
+            <div className="front-content">
+            <p className='heading1'>Temperatura LoRa</p>
+            <p className='tempLora'>{calculateAverage('lora', 'temperatura')}°C</p>
+            </div>
+            <div className="content">
+            <p className="heading">Humedad LoRa</p>
+            <p className='humLora'>{calculateAverage('lora', 'humedad')}%</p>
+            </div>
+          </div>
+        </div>
+        <div className="card-container2">
+          <div className="card2">
+            <div className="front-content2">
+            <p className='heading2'>Temperatura Wifi</p>
+            <p className='tempwifi'>{calculateAverage('wifi', 'temperatura')}°C</p>
+            </div>
+            <div className="content2">
+            <p className="heading22">Humedad Wifi</p>
+            <p className='humwifi'>{calculateAverage('wifi', 'humedad')}%</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div className='graficos'>
       <div className='lora-graficos'>
@@ -219,7 +218,7 @@ supabase
       {datos && <LinesChart datos={datos.slice(-15)} />}
       </div>
       <div className='wifi-graficos'>
-      <h3 className='wifi-tit'>Wifi</h3>
+      <h3 className='wifi-tit'>WiFi</h3>
       {datas && <LinesChart datos={datas.slice(-15)} />}
       </div>
       </div>

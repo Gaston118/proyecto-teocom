@@ -7,15 +7,18 @@ function CustomTable({ data }) {
     return <p>No data to display</p>;
   }
 
-  const tableHeaders = Object.keys(data[0]);
+  const tableHeaders = Object.keys(data[0]).slice(1);
 
   return (
     <table>
       <thead>
         <tr>
-          {tableHeaders.map((header, index) => (
-            <th key={index}>{header}</th>
-          ))}
+          
+          <th>time</th>
+          <th>Temp.</th>
+          <th>humedad</th>
+          <th>idModulo</th>
+          <th>date</th>
         </tr>
       </thead>
       <tbody>
@@ -32,3 +35,4 @@ function CustomTable({ data }) {
 }
 
 export default CustomTable;
+

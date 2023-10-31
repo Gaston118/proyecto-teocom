@@ -10,24 +10,30 @@ body {
 }
 nav {
   background: var(--primary);
-  padding: 10px 20px;
+  padding: 10px 10px;
   text-align: center;
   user-select: none;
+  vertical-align: center;
 }
 .nav  {
   color: #ffffff;
-  margin: 20px;
+  margin: 5px;
   display: inline-block;
   text-decoration: none;
   user-select: none;
-  margin-right: 40px;
+  margin-right: 5.5%;
 }
 nav h1 {
   color: #ffffff;
   font-family: 'Cairo Play';
-  font-size: 44px;
+  font-size: 40px;
   user-select: none;
-  margin-right: 120px;
+}
+@media (max-width: 768px) {
+  /* Oculta el elemento de texto */
+  nav h1 {
+    height : 0px;
+  }
 }
 
 .nav :hover{
@@ -37,7 +43,7 @@ nav h1 {
 }
 
 img{
-  width: 100px;
+  width: 70px;
   float: left;
   margin: 20px;
 }
