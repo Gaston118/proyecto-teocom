@@ -51,7 +51,7 @@ function DatosLora() {
   setDatos((prevDatos) => [...prevDatos, newDato]);
   setUsuarios((prevDatos)=>[...prevDatos, newDato].slice(-10));
 
-  if (newDato.temperatura > 50) {
+  if (newDato.temperatura > 45) {
     Swal.fire({
       title: 'Alerta de Temperatura Alta',
       text: `La temperatura es ${newDato.temperatura}°C en el módulo ${newDato.id_modulo}`,
