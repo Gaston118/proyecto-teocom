@@ -129,7 +129,7 @@ supabase
       ) : (
         <div>
           <div className="container">
-            <h2 className="wifi-title">Wifi</h2>
+            <h2 className="wifi-title">WiFi</h2>
             <div className="containerInput">
             <input
             className="form-control inputBuscar"

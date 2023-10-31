@@ -38,6 +38,7 @@
   
   .card .front-content .heading1 {
     font-size: 32px;
+    font-family: "Roboto", sans-serif;
     font-weight: 700;
     opacity: 1;
     background: linear-gradient(#0f57a9, #0d2344);
@@ -72,6 +73,7 @@
     font-size: 32px;
     font-weight: 700;
     margin: 20px;
+    font-family: "Roboto", sans-serif;
   }
 
   .card .front-content .tempLora {
@@ -141,6 +143,7 @@
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
     margin: 20px;
     padding: 5px;
+    font-family: "Roboto", sans-serif;
   }
   
   .card2 .content2 {
@@ -165,6 +168,7 @@
   .card2 .content2 .heading22 {
     font-size: 32px;
     font-weight: 700;
+    font-family: "Roboto", sans-serif;
     margin: 20px;
   }
 
@@ -233,6 +237,7 @@
   text-align: center;
   font-size: 30px;
   color: #133867;
+  font-family: "Roboto", sans-serif;
 }
 
 
