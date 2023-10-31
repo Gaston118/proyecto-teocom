@@ -191,7 +191,7 @@ supabase
           <div className="card">
             <div className="front-content">
             <p className='heading1'>Temperatura LoRa</p>
-            <p className='tempLora'>{calculateAverage('lora', 'temperatura').toFixed(2)}°C</p>
+            <p className='tempLora'>{(calculateAverage('lora', 'temperatura'))}°C</p>
             </div>
             <div className="content">
             <p className="heading">Humedad LoRa</p>
