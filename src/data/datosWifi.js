@@ -7,6 +7,8 @@ import CustomTable from "../components/CustomTable";
 import { fetchDatos } from "./getDatos";
 import "./datosWifi.css";
 
+
+
 function DatosWifi(){
     const [fetchError, setFetchError] = useState(null);
     const [Datos, setDatos] = useState(null);
@@ -49,6 +51,7 @@ function DatosWifi(){
   // Actualiza el estado local de Datos con la nueva inserción
   setDatos((prevDatos) => [...prevDatos, newDato]);
   setUsuarios((prevDatos)=>[...prevDatos, newDato].slice(-10));
+
   };
 
   // Función para manejar eventos de actualización
