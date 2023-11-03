@@ -102,7 +102,7 @@ function DatosLora() {
         setUsuarios(null);
       }
       else{
-        console.log(data)
+        //console.log(data)
         setDatos(data);
         setUsuarios(data.slice(-10));
         setFetchError(null);

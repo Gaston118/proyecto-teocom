@@ -26,7 +26,7 @@ export async function fetchDatos(tabla){
       console.log("La base de datos está vacía");
       return { error: "La base de datos está vacía" };
     } 
-      console.log(datosConHoraFechaArg)
+      //console.log(datosConHoraFechaArg)
       return datosConHoraFechaArg;
       }
 };

@@ -149,7 +149,7 @@ function Home() {
         setdata(null);
       }
       else{
-        console.log(data)
+        //console.log(data)
         setdata(data);
         setFetchError(null);
       }
@@ -164,7 +164,7 @@ function Home() {
         setdato(null);
       }
       else{
-        console.log(data)
+        //console.log(data)
         setdato(data);
         setFetchError(null);
       }
