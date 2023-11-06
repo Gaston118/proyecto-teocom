@@ -168,7 +168,7 @@ function Home() {
         setdato(data);
         setFetchError(null);
       }
-      const umbralTemperatura = await mostrarDialogoUmbral();
+      
     }
    fdeL();
 
