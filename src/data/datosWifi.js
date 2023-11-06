@@ -51,7 +51,7 @@ function DatosWifi(){
   // Actualiza el estado local de Datos con la nueva inserción
   setDatos((prevDatos) => [...prevDatos, newDato]);
   setUsuarios((prevDatos)=>[...prevDatos, newDato].slice(-10));
-  if (newDato.temperatura > 45) {
+  if (newDato.temperatura > 35) {
     Swal.fire({
       title: 'Alerta de Temperatura Alta',
       text: `La temperatura es ${newDato.temperatura}°C en el módulo ${newDato.id_modulo}`,

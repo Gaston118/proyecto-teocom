@@ -26,7 +26,7 @@ function Home() {
   };
   // Actualiza el estado local de Datos con la nueva inserción
   setdata((prevDatos) => [...prevDatos, newDato]);
-  if (newDato.temperatura > 50) {
+  if (newDato.temperatura > 35) {
     Swal.fire({
       title: 'Alerta de Temperatura Alta',
       text: `La temperatura es ${newDato.temperatura}°C en el módulo ${newDato.id_modulo}`,
